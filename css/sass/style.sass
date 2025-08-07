@@ -1,0 +1,1178 @@
+$font-primary: 'Montserrat', sans-serif
+$font-secondary: 'Roboto', sans-serif
+$primary-color: #16215C
+$secondary-color: #FB3C7F
+$secondary-color-hover: #e3326f
+$heading-color: #424242
+$description-color: #858585
+$color-000: #000000
+$radius-5: 5px
+$white: #FFF
+$secondary: #FB3C7F
+
+body
+  font: 100% $font-secondary
+  text-rendering: optimizespeed
+
+.btn  
+  border: 2px solid transparent!important
+  outline: 0 !important
+  box-shadow: none !important
+  transition: all 0.15s ease!important
+
+.btn.btn-secondary  
+  background: $secondary-color
+  border-color: $secondary-color
+.btn.btn-secondary:hover, .btn.btn-secondary:focus  
+  background: $secondary-color-hover
+  box-shadow: 0 4px 10px rgba($secondary-color, 0.7)!important
+
+.btn-secondary-outline
+  position: relative
+  border-color: $secondary-color!important
+  color: $secondary-color!important
+  font-weight: 500
+.btn-secondary-outline:after  
+  content: ""
+  position: absolute
+  top: 100%
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 1
+  background: rgba($secondary-color, 0.08)
+  transition: all 0.15s ease
+.btn-secondary-outline:hover:after, .btn-secondary-outline:focus:after
+  top: 0
+.btn-secondary-outline:hover, .btn-secondary-outline:focus
+  border-color: $secondary-color-hover!important
+
+.btn-icon
+  padding: 9px
+  line-height: 0
+
+  img
+    width: 24px
+    height: 24px
+
+.dual-icon
+  .icon-wrapper
+    position: relative
+    display: block
+    width: 24px
+    height: 24px
+    img
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 24px
+      height: 24px
+      transition: all 0.2s ease-in-out
+      transform: scale(1)
+    img.default
+      opacity: 1
+      visibility: visible
+      transform: scale(1)
+    img.active
+      opacity: 0
+      visibility: hidden
+      transform: scale(0)
+
+.dual-icon:hover, .dual-icon:focus
+  img.default
+    opacity: 0
+    visibility: hidden
+    transform: scale(0)
+  img.active
+    opacity: 1
+    visibility: visible
+    transform: scale(1)
+
+.bb-xs-1
+  border-bottom: 1px solid rgba(0,0,0,0.1)
+.br-xs-1
+  border-right: 1px solid rgba(0,0,0,0.1)
+
+.text-primary
+  color: $primary-color!important
+.text-secondary
+  color: $secondary-color!important
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  margin-bottom: 10px
+  transition: all 0.2s ease
+  z-index: 2
+  .navbar-toggler
+    border: 0
+    border-radius: 50%
+    padding: 8px
+    box-shadow: none!important
+    outline: none!important
+    transition: all 0.2s ease
+  .navbar-toggler:hover 
+    background: rgba($secondary-color-hover, 0.1)
+  .navbar-brand
+    padding: 0
+    display: inline-block
+    vertical-align: middle
+    img
+      display: inline-block
+      vertical-align: middle  
+      height: 34px
+      width: auto
+  .navbar-nav
+    .nav-item
+      text-align: center
+      .nav-link
+        font-size: 15px
+        line-height: 21px
+        font-weight: 500
+        padding: 12px 20px
+      .nav-link.active, .nav-link:hover, .nav-link:focus
+        color: $secondary-color
+      .nav-link:focus
+        background: rgba($secondary-color, 0.1)
+      .nav-link:focus-visible
+        outline: none!important
+      .nav-link:after
+        display: none
+      .btn  
+        margin-top: 12px
+        font-size: 14px
+        line-height: 18px
+  .offcanvas
+    width: 100%
+    border-left: 0
+    overflow: auto
+    padding: 10px 0
+    .offcanvas-close
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      text-align: center
+      padding: 20px 0
+      transition: all 0.2s ease
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) -21.01%, rgb(255,255,255,0.85) 35.8%, #FFFFFF 100%)
+
+.page-scrolled 
+  header
+    background: #FFF
+    box-shadow: 0 2px 14px rgba(0,0,0,0.1)
+
+footer
+  background: #FFF
+  .primary-footer 
+    padding: 20px 20px 10px
+    .footer-brand
+      display: inline-block
+      vertical-align: top
+      margin-bottom: 10px
+      img 
+        display: inline-block
+        vertical-align: top
+        height: 28px
+        width: auto
+    .description-text
+      font-size: 14px
+      line-height: 22px
+      color: $description-color
+      padding-bottom: 4px
+    .partner-payments
+      padding-bottom: 14px
+      .partner-payments-item, li
+        display: inline-block
+        vertical-align: top
+        img
+          display: inline-block
+          vertical-align: top
+          width: 40px
+          height: 40px
+      li + li 
+        margin-left: 12px
+    .footer-links-wrapper
+      margin-bottom: 10px
+      b
+        display: block
+        font-size: 16px
+        line-height: 20px
+        font-family: $font-primary
+        font-weight: 600
+        padding-left: 3px
+        margin-bottom: 6px
+        color: #3A3A3A
+      .footer-link
+        display: inline-block
+        font-size: 14px
+        line-height: 18px
+        color: $description-color
+        padding: 3px
+        margin-bottom: 2px
+        white-space: nowrap
+      .footer-link:hover, .footer-link:focus  
+        color: $secondary-color
+      .social-link
+        display: inline-block
+        vertical-align: top
+        margin-right: 14px
+        img 
+          display: inline-block
+          vertical-align: top
+          width: 24px
+          height: 24px
+          opacity: 0.5
+      .social-link:hover, .social-link:focus
+        img
+          opacity: 1
+  .secondary-footer 
+    border-top: 1px solid rgba(103,103,103,0.2)
+    background: #FFF
+    font-size: 12px
+    line-height: 18px
+    color: rgba(133,133,133,0.5)
+    text-align: center
+    padding: 12px
+
+.hero-banner-slider
+  position: relative
+  .hero-banner-img
+    padding: 180px 10px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top right
+    min-height: 600px
+    .hero-banner-data
+      position: relative
+      z-index: 1
+      .hero-banner-title
+        font-size: 26px
+        line-height: 32px
+        font-weight: 700
+        font-family: $font-primary
+        color: $primary-color
+        padding: 0 0 12px
+        max-width: 400px
+        > span
+          display: inline-block
+          vertical-align: unset
+          padding: 0 4px
+      .hero-banner-description  
+        font-size: 15px
+        line-height: 21px
+        font-family: $font-secondary
+        color: $primary-color
+        max-width: 400px
+  .hero-slider-action
+    position: absolute
+    bottom: 25%
+    padding: 0 15px
+    text-align: right
+    .btn
+      padding: 4px
+      background: $white
+      border-radius: 50%
+
+.testimonial-section
+  margin: 40px 0
+  .section-header
+    position: relative
+    padding: 0 90px 20px 10px
+    .section-title
+      font-size: 22px
+      line-height: 28px
+      color: $color-000
+      font-weight: 600
+      padding: 0
+      font-family: $font-primary
+    .section-slider-action
+      position: absolute
+      right: 10px
+      top: 0
+      .btn
+        padding: 2px
+  .slick-slider
+    margin: 0 -10px
+    padding: 0 5px
+    .testimonial-card
+      position: relative
+      background: $white
+      box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.12)
+      border-radius: $radius-5
+      padding: 20px
+      margin: 10px 15px
+      .testimonial-title
+        font-size: 18px
+        line-height: 22px
+        font-family: $font-secondary
+        color: $heading-color
+        font-weight: 500
+        padding-bottom: 8px 
+      .testimonial-description
+        font-size: 15px
+        line-height: 21px
+        font-family: $font-secondary
+        color: $color-000
+        font-style: italic
+        padding-bottom: 18px
+      .testimonial-owner
+        display: flex
+        align-items: center
+        .testimonial-avatar
+          display: flex
+          width: 44px
+          height: 44px
+          border: 2px solid $secondary-color
+          padding: 4px
+          border-radius: 50%
+          margin-right: 12px 
+          overflow: hidden
+          img
+            display: block
+            width: 32px
+            height: 32px
+            border-radius: 50%
+        .testimonial-owner-detail
+          font-size: 15px
+          line-height: 19px
+          color: $color-000
+          padding: 0
+          font-weight: 500
+          span
+            font-size: 12px
+            line-height: 16px
+            display: block
+            font-weight: 400
+            color: $description-color
+    .testimonial-card:before
+      content: ""
+      position: absolute
+      top: 10px
+      right: 15px
+      width: 34px
+      height: 34px
+      background: url('../../images/quote.svg') no-repeat center
+      background-size: 34px 34px
+
+.card
+  padding: 30px
+  background: #FFFFFF
+  box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.12)
+  border-radius: 5px
+  border: 0
+
+.btn-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  .btn
+    margin: 8px  
+
+.slick-arrow.slick-disabled
+  img.default
+    opacity: 0.4
+    transform: scale(1)
+    visibility: visible
+  img.active
+    display: none
+
+.primary-accordion
+  .accordion-item
+    border: 0
+    .accordion-header
+      padding: 0
+      .accordion-button
+        padding: 10px 0
+        box-shadow: none!important
+        background: transparent!important
+        font-size: 16px
+        line-height: 20px
+        font-weight: 500
+        color: $heading-color
+        align-items: flex-start
+      .accordion-button:after
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background: $secondary-color url(../../images/minus-white.svg) no-repeat
+        background-position: center center
+        background-size: 10px 10px
+      .accordion-button.collapsed:after
+        background: $secondary-color url(../../images/plus-white.svg) no-repeat
+        background-position: center center
+        background-size: 10px 10px
+      .accordion-button:focus
+        color: $secondary-color
+    .accordion-collapse
+      .accordion-body
+        padding: 0 0 10px
+        font-size: 14px
+        line-height: 22px
+        color: $description-color
+
+.know-about-company
+  margin: 40px 10px
+  .card
+    padding: 30px 20px
+    .card-title
+      font-size: 22px
+      line-height: 28px
+      color: $heading-color
+      font-family: $font-primary
+      font-weight: 700
+      margin: 0
+      padding: 0 0 10px
+    .card-description
+      font-size: 15px
+      line-height: 24px
+      color: $description-color
+      font-family: $font-secondary
+      padding: 0 0 16px
+    .btn-list 
+      .btn  
+        font-size: 15px
+        line-height: 24px
+
+.goals-section
+  background: $primary-color
+  padding: 40px 15px 30px
+  .section-title
+    font-size: 22px
+    line-height: 28px
+    color: $white
+    font-weight: 700
+    font-family: $font-primary
+    padding-bottom: 24px
+    overflow: hidden
+  .goal-card-wrapper
+    color: $white
+    position: relative
+    padding: 8px 8px 8px 20px
+    border-radius: 5px
+    transition: all 0.1s ease-in-out
+    margin-bottom: 20px
+    min-height: calc(100% - 20px)
+    .data
+      font-size: 26px
+      line-height: 32px
+      padding: 0
+      font-family: $font-primary
+      font-weight: 700
+      position: relative
+      z-index: 1
+      .label
+        font-size: 15px
+        line-height: 19px
+        margin-top: 2px
+        padding: 0
+        font-family: $font-secondary
+        font-weight: 400
+  .goal-card-wrapper:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    border-left: 3px solid $secondary-color
+    border-radius: 5px
+  .goal-card-wrapper:after
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 100%
+    z-index: 0
+    border-radius: 5px
+    overflow: hidden
+    transition: all 0.25s ease-in
+    background: linear-gradient(90deg, #FB3C7F 0%, rgba(251, 60, 127, 0.511331) 47.49%, rgba(251, 60, 127, 0) 97.86%)
+  .goal-card-wrapper:hover:after
+    right: 0
+  .goal-card-wrapper:hover
+    overflow: hidden
+
+.partner-section
+  margin: 40px 0
+  .world-map
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    padding: 30px 0
+    background: url('../../images/world-map.png') no-repeat center
+    background-size: contain
+    min-height: 190px
+    margin-bottom: 20px
+    .world-statistics
+      font-size: 56px
+      line-height: 40px
+      font-weight: 700
+      color: $secondary-color
+      padding: 0 0 8px
+    .world-label
+      font-size: 20px
+      line-height: 28px
+      font-weight: 500
+      color: $heading-color
+      padding: 0
+  .partner-links
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    max-width: 296px
+    margin: 0 auto
+    li
+      display: inline-flex
+      .link
+        position: relative
+        width: 147px
+        height: 93px
+        display: inline-block
+        vertical-align: middle
+        overflow: hidden
+        img 
+          display: block
+          position: absolute
+          top: 50%
+          right: 50%
+          left: 50%
+          bottom: 50%
+          transform: translate(-50%, -50%) scale(1)
+          max-width: 80%
+          transition: all 0.1s ease
+          transform-origin: center
+      .link:hover
+        img
+          transform: translate(-50%, -50%) scale(1.1)
+
+.question-section
+  margin: 30px 10px 50px
+  .section-title
+    font-size: 22px
+    line-height: 28px
+    color: $heading-color
+    font-weight: 700
+    font-family: $font-primary
+    padding-bottom: 14px
+  .section-description
+    font-size: 15px
+    line-height: 24px
+    color: $description-color
+    font-weight: 400
+    font-family: $font-secondary
+    padding: 0 0 8px
+  .question-frame
+    padding: 16px
+    margin: 10px 0 30px
+    position: relative
+    .question-img
+      width: 440px
+      height: auto
+      max-width: 80%
+      border-radius: 5px
+      overflow: hidden
+      margin: 0
+      display: block
+    .analytics-card
+      display: flex
+      align-items: center
+      position: absolute
+      bottom: 0
+      right: 0  
+      border-radius: 5px
+      background: $white
+      padding: 10px 12px
+      box-shadow: 3px -1px 16px -4px rgba(0, 0, 0, 0.16)
+      img
+        display: inline-block
+        width: 64px
+        height: 64px
+        margin-right: 10px
+      .analytics-label
+        font-size: 16px
+        line-height: 20px
+        padding: 0
+        color: $color-000
+        span
+          display: block
+          font-size: 14px
+          line-height: 22px
+          color: $description-color
+  .question-frame:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    width: 173px
+    height: 158px
+    background: $secondary-color
+    border-radius: 5px
+
+.latest-work-section
+  position: relative
+  padding: 40px 8px
+  background: $primary-color
+  .latest-work-details
+    color: $white
+    .section-title
+      font-size: 26px
+      line-height: 34px
+      font-weight: 700
+      font-family: $font-primary
+      padding-bottom: 14px
+    .section-description
+      font-size: 15px
+      line-height: 24px
+      font-weight: 400
+      font-family: $font-secondary
+      padding: 0 0 16px
+  
+
+  .slick-slider
+    margin: 0 -10px
+    .slick-list
+      padding: 0!important    
+    .project-card
+      position: relative
+      cursor: pointer
+      height: 340px
+      border-radius: 5px
+      overflow: hidden
+      color: $white
+      margin: 10px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: top center
+      transition: all 0.15s ease
+      transform-origin: top center
+      .project-details
+        padding: 16px
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 1
+        border-radius: 5px
+        .project-domain
+          font-size: 15px
+          line-height: 23px
+          display: block
+        .project-name
+          font-size: 18px
+          line-height: 22px
+          display: block
+          padding: 0
+          font-weight: 700
+          font-family: $font-primary
+      .project-details:after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 120px
+        z-index: -1
+        transition: all 0.4s ease
+        background: linear-gradient(180.65deg, rgba(22, 33, 92, 0) 26.48%, #16215C 99.44%)
+    .project-card:hover
+      .project-img
+        transform: scale(1.1)
+      .project-details:after
+        background: linear-gradient(180.65deg, rgba(251, 60, 127, 0) 26.48%, #FB3C7F 99.44%)
+  .section-slider-action
+      margin-top: 15px
+      text-align: center
+      .btn-icon 
+        padding: 2px
+
+.text-animation
+  h2.section-title
+    font-size: 48px
+    line-height: 52px
+    color: $heading-color
+    font-weight: 700
+    font-family: $font-primary
+
+  .reveal-text
+    visibility: hidden
+
+  .line
+    position: relative
+    overflow: hidden
+    display: inline-block
+  .word
+    padding: 0 4px
+  .word, .whitespace
+    display: content
+
+
+.text-animation.section
+  padding: 80px 0 40px
+
+.scroll-blend-wrapper
+  position: relative
+  min-height: 100vh
+  .scroll-blend-slide
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #F5F5F5 url('../../images/banner1.jpg') no-repeat center center
+    .section-title
+      font-size: 106px
+      line-height: 116px
+      font-family: $font-primary
+      font-weight: 700
+      color: $heading-color
+      max-width: 780px
+
+
+@media(min-width: 576px)
+  header 
+    .navbar-nav 
+      .nav-item 
+        .nav-link
+          font-size: 15px
+          line-height: 19px
+          font-weight: 500
+    .offcanvas
+      width: 240px
+
+  .hero-banner-slider
+    .hero-banner-img
+      background-position: top right
+      min-height: auto
+      padding: 200px 20px
+      .hero-banner-data
+        .btn-secondary-outline
+          background: transparent
+        .hero-slider-action
+          text-align: left
+    .hero-slider-action
+      bottom: 22%
+      text-align: left
+      padding: 0 25px
+      .btn  
+        background: transparent
+
+  .partner-section
+    .world-map
+      min-height: 100%
+  
+  .question-section 
+    .question-frame 
+      .analytics-card
+        padding: 15px 
+        img
+          width: 84px
+          height: 84px
+          margin-right: 15px
+
+
+@media(min-width: 768px)
+  .footer
+    .primary-footer 
+      padding: 30px 20px 20px
+      .partner-payments 
+        padding-bottom: 10px
+
+  .primary-accordion
+    .accordion-item
+      .accordion-header
+        .accordion-button
+          padding: 10px 0
+          font-size: 18px
+          line-height: 22px
+      .accordion-collapse
+        .accordion-body
+          padding: 0 0 6px
+          font-size: 15px
+          line-height: 24px
+
+  .btn-list
+    .btn
+      margin: 8px 12px  
+
+  .goals-section
+    padding: 50px 15px
+    .section-title
+      font-size: 24px
+      line-height: 30px
+      padding-bottom: 30px
+    .goal-card-wrapper
+      padding: 8px 8px 8px 24px
+      .data
+        font-size: 32px
+        line-height: 38px
+        .label
+          font-size: 20px
+          line-height: 26px
+          margin-top: 2px
+
+  .know-about-company
+    margin: 50px 20px
+
+  .hero-banner-slider
+    .hero-banner-img
+      padding: 200px 40px
+      .hero-banner-data
+        .hero-banner-title
+          font-size: 34px
+          line-height: 40px
+          padding: 0 0 10px
+          max-width: 70%
+        .hero-banner-description
+          line-height: 23px
+          padding: 0 0 20px
+          max-width: 70%
+        .btn-secondary-outline
+          line-height: 26px
+    .hero-slider-action
+      padding: 0 50px
+
+  .testimonial-section
+    margin: 60px 0
+    .slick-slider
+      margin: 0
+      padding: 0
+      .testimonial-card
+        box-shadow: 0px 0px 18px -1px rgb(0, 0, 0, 0.12)
+        .testimonial-title
+          padding-bottom: 6px
+        .testimonial-description
+          line-height: 24px
+        .testimonial-owner 
+          .testimonial-avatar
+            width: 48px
+            height: 48px
+            padding: 4px
+            margin-right: 14px
+            img
+              width: 36px
+              height: 36px
+      .testimonial-card:before
+        width: 44px
+        height: 44px
+        background: url('../../images/quote.svg') no-repeat center
+        background-size: 44px 33px
+
+  .partner-section
+    margin: 30px 0
+    .world-map
+      .world-statistics
+        font-size: 104px
+        line-height: 94px
+      .world-label
+        font-size: 38px
+        line-height: 42px
+    .partner-links
+      max-width: 100%
+      padding: 30px 0
+      li  
+        .link
+          width: 176px
+          height: 112px
+
+  .question-section 
+    .question-frame
+      padding: 20px 
+      margin: 0
+      .question-img
+        max-width: 100%
+        margin: 0
+      .analytics-card 
+        padding: 14px 28px 14px 14px
+        .analytics-label
+          font-size: 18px
+          line-height: 22px
+          span
+            font-size: 15px
+            line-height: 24px
+            padding-top: 2px
+    .question-frame:before
+      top: 0
+      left: 0
+
+
+@media(min-width: 992px)
+  .know-about-company
+    margin: 60px 20px
+    .card
+      padding: 40px 30px
+      .card-title
+        font-size: 26px
+        line-height: 32px
+        padding: 0 0 20px
+      .card-description
+        padding: 0 0 10px
+      .btn-list 
+        .btn  
+          line-height: 28px
+
+  .footer
+    .primary-footer 
+      padding: 40px 20px 30px
+      .footer-links-wrapper 
+        b
+          padding-left: 6px
+          margin-bottom: 10px
+        .footer-link
+          font-size: 15px
+          line-height: 19px
+          padding: 4px 6px
+          margin-bottom: 4px
+  
+  .hero-banner-slider
+    .hero-banner-img
+      min-height: 580px
+      padding: 160px 60px 100px
+      .hero-banner-data
+        .hero-banner-title
+          font-size: 38px
+          line-height: 44px
+          padding: 0 0 12px
+        .hero-banner-description
+          padding: 0 0 30px
+        .btn-secondary-outline
+          line-height: 30px
+          padding: 6px 20px
+    .hero-slider-action
+      padding: 0 60px 
+      left: 6%
+
+  .testimonial-section
+    .section-header
+      padding: 0 90px 10px 0
+      .section-title
+        font-size: 24px
+        line-height: 28px
+        font-weight: 700
+      .section-slider-action
+        top: -1px
+        right: 0
+    .slick-slider
+      margin: 0 -15px
+      .testimonial-card
+        margin: 15px
+        box-shadow: 0px 0px 16px -1px rgb(0, 0, 0, 0.12)
+
+  .question-section
+    margin: 40px 0 60px  
+    .question-frame
+      .section-title
+        font-size: 26px
+        line-height: 30px
+
+
+@media(min-width: 1200px)
+  header
+    .navbar-brand
+      img
+        height: 42px
+        width: auto
+    .navbar-nav
+      .nav-item
+        .nav-link
+          font-size: 15px
+          line-height: 19px
+          font-family: $font-primary
+          font-weight: 600
+          color: #000
+          padding: 8px 20px
+          position: relative
+        .nav-link:after
+          content: ""
+          display: block
+          position: absolute
+          bottom: -20px
+          left: 50%
+          transform: translate(0, -50%)
+          margin-left: -8px
+          border-bottom: 10px solid $secondary-color
+          border-top: 8px solid transparent
+          border-left: 8px solid transparent
+          border-right: 8px solid transparent
+          opacity: 0
+          visibility: hidden
+        .nav-link.active:after
+          opacity: 1
+          visibility: visible
+        .btn  
+          margin-top: 0
+    .offcanvas
+      overflow: hidden
+
+  footer  
+    .primary-footer 
+      padding: 60px 20px 40px!important
+      .footer-brand
+        margin-bottom: 22px!important
+      .partner-payments
+        padding: 20px 0!important
+      .footer-links-wrapper
+        b
+          margin-bottom: 20px!important
+        .footer-link
+          padding: 4px 6px!important
+          margin-bottom: 8px!important
+    .secondary-footer
+      padding: 25px 20px!important
+
+  .know-about-company
+    margin: 70px 20px
+    .card 
+      padding: 60px 20px 50px
+      .card-title
+        font-size: 30px
+        line-height: 36px
+        padding: 0 0 14px
+      .card-description
+        padding: 0 0 18px
+      .btn-list 
+        .btn  
+          line-height: 46px
+  
+  .goals-section
+    padding: 60px 15px 40px
+    .section-title
+      font-size: 30px
+      line-height: 36px
+      padding-bottom: 30px
+    .goal-card-wrapper
+      padding: 22px 8px 22px 26px
+      margin-bottom: 40px
+      min-height: calc(100% - 40px)
+    .data
+      font-size: 26px
+      line-height: 32px
+      .label
+        font-size: 20px
+        line-height: 26px
+        margin-top: 4px
+    .goal-card-wrapper:before
+      border-left: 5px solid $secondary-color
+
+  .hero-banner-slider
+    .hero-banner-img
+      min-height: 840px
+      padding: 270px 100px 100px
+      .hero-banner-data
+        .hero-banner-title
+          font-size: 45px
+          line-height: 53px
+          padding: 0 0 16px
+          min-width: 500px
+          max-width: 50%
+        .hero-banner-description
+          padding: 0 0 32px
+          min-width: 500px
+          max-width: 50%
+        .btn-secondary-outline
+          line-height: 30px
+          padding: 6px 28px
+      .hero-slider-action
+        margin-top: 50px
+  
+  .testimonial-section
+    margin: 70px 0
+    .section-header
+      padding: 0 90px 20px 0
+      .section-title
+        font-size: 30px
+        line-height: 36px
+      .section-slider-action
+        top: 2px
+        right: 0
+    .slick-slider
+      margin: 0 -10px
+      .testimonial-card
+        margin: 15px
+        box-shadow: 0px 0px 16px -1px rgb(0, 0, 0, 0.12)
+
+  .partner-section 
+    .world-map 
+      .world-statistics
+        font-size: 150px
+        line-height: 120px
+      .world-label
+        font-size: 45px
+        line-height: 49px
+
+  .question-section
+    margin: 60px 0 90px
+    .question-frame
+      padding: 30px 56px 78px 30px
+      .analytics-card
+        padding: 14px 40px 14px 14px
+        img 
+          width: 136px
+          height: 136px
+    .section-title
+      font-size: 30px
+      line-height: 40px
+      padding-bottom: 14px
+    .section-description
+      padding-bottom: 8px
+
+  .latest-work-section
+    display: flex
+    align-items: center
+    background: transparent
+    padding: 40px 0
+    overflow: hidden
+    min-height: 530px
+    .latest-work-details
+      padding-right: 8px
+      .section-title
+        font-size: 30px
+        line-height: 40px
+        padding: 0 28px 16px 0
+    .latest-work-details:before
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 50%
+      margin-right: 190px
+      z-index: -1
+      border-radius: 0 5px 5px 0 
+      background: $primary-color
+    .section-slider-action
+      text-align: left
+      margin-top: 0px
+      margin-left: -4px
+    .slick-slider-wrapper
+      position: absolute
+      top: 50%
+      margin-top: -220px
+      left: 50%
+      right: 0
+      margin-left: -258px
+      .slick-slider
+        .project-card
+          height: 430px
+
+  .br-xl-1
+    border-right: 1px solid rgba(0,0,0,0.1)
+  .bb-xl-0
+    border-bottom: 0
+  .br-xl-0
+    border-right: 0
+
+
+@media (min-width: 1400px)
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+    max-width: 1134px
+
